@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log in</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js"></script>
+    <script>
+      async function signup() {
+        const name = document.getElementById("signup-name").value;
+        const username = document.getElementById("signup-username").value;
+        const number = document.getElementById("signup-number").value;
+        const email = document.getElementById("signup-email").value;
+        const password = document.getElementById("signup-password").value;
+
+        const response = await fetch("http://localhost:3000/signup", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name,
+            number,
+            email,
+            password,
+          }),
+        });
+        const result = await response.json();
+        alert(result.message || "Signup Sucessfully ");
+        console.log(result);
+      }
+
+      async function signin() {
+        const username = document.getElementById("signin-username").value;
+        const password = document.getElementById("signin-password").value;
+
+        const response = await axios.post("http://localhost:3000/signin", {
+          username,
+          password,
+        });
+
+        localStorage.setItem("token", response.data.token);
+        console.log(response.data.token);
+        alert("You are signed in");
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <h1>Signup</h1>
+      <input
+        type="text"
+        name="name"
+        placeholder="enter name "
+        id="signup-name"
+      />
+      <input
+        type="text"
+        name="username"
+        placeholder="username "
+        id="signup-username"
+      />
+      <input
+        type="number"
+        name="number"
+        placeholder="enter phone number"
+        id="signup-number"
+      />
+      <input type="email" name="emial" placeholder="email" id="signup-email" />
+      <input
+        type="text"
+        name="password"
+        placeholder="password"
+        id="signup-password"
+      />
+      <button onclick="signup()">signup</button>
+    </div>
+
+    <div>
+      <h1>Signin</h1>
+      <input type="text" placeholder="username" id="signin-username" />
+      <input type="text" placeholder="password" id="signin-password" />
+      <button onclick="signin()">signin</button>
+    </div>
+
+    <div>
+      <h1>User Details</h1>
+    </div>
+  </body>
+</html>
