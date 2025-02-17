@@ -1,0 +1,1 @@
+// in nodejs by default cross is blocked

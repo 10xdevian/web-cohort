@@ -21,7 +21,7 @@ app.post("/signup", function (req, res) {
   res.json({
     msg: "you are signup",
   });
-  console.log(users[0]);
+  
   //   console.log(users[1]);
 });
 
@@ -47,7 +47,7 @@ app.post("/signin" , function(req, res){
       msg:"User signin is sucessfull ",
       token:token,
     })
-   console.log("token"+token) 
+   // console.log("token"+token) 
   }else{
     res.json({
       msg:"username and password is incorrect"
@@ -77,10 +77,15 @@ if(username){
 }
 }
 const todos = [];
+let idCounter = 1;
+function generateId(){
+  return idCounter++;
+}
 app.post("/create",auth, function(req , res){
   const title = req.body.title;
   const description = req.body.description;
   todos.push({
+    id:generateId(),
     title:title,
     description:description
   })
