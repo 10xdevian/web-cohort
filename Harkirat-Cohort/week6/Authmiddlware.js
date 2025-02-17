@@ -46,7 +46,7 @@ app.post("/signin", logMiddleware, function (req, res) {
       {
         username: username,
       },
-      JWT_SECRET,
+      JWT_SECRET
     );
     // foundUser.token = token;  // this line of code store the token into varible
     res.json({

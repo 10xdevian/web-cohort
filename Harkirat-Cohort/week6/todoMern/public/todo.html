@@ -1,0 +1,121 @@
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <script>
+  
+  
+    async function signup() {
+      const name = document.getElementById("signup-name").value;
+      const username = document.getElementById("signup-username").value;
+      const password = document.getElementById("signup-password").value;
+
+      await axios.post("http://localhost:3000/signup", {
+        name,
+        username,
+        password,
+      });
+
+      alert("you are signup");
+    }
+    
+    
+    async function signin() {
+      const username = document.getElementById("signin-username").value;
+      const password = document.getElementById("signin-password").value;
+
+      const response =  await axios.post("http://localhost:3000/signin", {
+        username,
+        password,
+      });
+      
+     
+      localStorage.setItem("token", response.data.token);
+      console.log(response.data.token);
+
+      alert("you are signin");
+      
+       getTodoList();
+    }
+    
+    async function addTodo(){
+      const title = document.getElementById("todo-title").value;
+      const description = document.getElementById("todo-description").value;
+      
+      await axios.post("http://localhost:3000/create", {
+         title,
+         description
+      } ,{
+        headers:{
+          token:localStorage.getItem("token")
+        },
+      })
+      alert("todo is created")
+      getTodoList();
+    }
+    
+    async function getTodoList(){
+          const response = await axios.get("http://localhost:3000/todos", {
+            headers:{
+              token:localStorage.getItem("token")
+            } 
+          })
+          
+          const todos = response.data.todos;
+          
+          let todoList = document.getElementById("todo-list");
+          todoList.innerHTML="";  // clear the prev list
+          
+          todos.forEach((todo) => {
+            let todoDiv = document.createElement("div");
+            todoDiv.classList.add("todo-item");
+            
+            let title =document.createElement("h3");
+            title.innerText= todo.title;
+            
+            let description = document.createElement("p");
+            description.innerText = todo.description;
+            
+            // append the child 
+            todoDiv.appendChild(title)
+             todoDiv.appendChild(description)
+             
+            todoList.appendChild(todoDiv);
+          })        
+        }
+        getTodoList(); 
+
+  </script>
+  <title>todo</title>
+</head>
+<body>
+  <div>
+    <h1>Signup</h1>
+    <input type="text" placeholder="enter name" id="signup-name" />
+    <input type="text" placeholder="enter username" id="signup-username" />
+    <input type="text" placeholder="enter password" id="signup-password" />
+    <button onclick="signup()">Signup</button>
+  </div>
+  
+  <div>
+    <h1>Signin</h1>
+    <input type="text" placeholder="enter username" id="signin-username" />
+    <input type="text" placeholder="enter password" id="signin-password" />
+    <button onclick="signin()">Signin</button>
+  </div>
+  
+  
+  
+  <div>
+    <h1>Create todo</h1>
+    <input type="text" placeholder="enter Title" id="todo-title" />
+    <input type="text" placeholder="enter Description" id="todo-description" />
+    <button onclick="addTodo()">Add todo</button>
+  </div>
+  
+  <div>
+    <h1>Your Todo</h1>
+    <div id="todo-list">
+    
+    <div/>
+  </div>
+</body>

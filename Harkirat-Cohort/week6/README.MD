@@ -19,3 +19,17 @@ In jwt we dont enctypt the string we just encode the string
 
 
 ### This is how we pass the data from middleware to routes  (Authmiddlware.js)
+
+# Full stack Todo app withoud mongodb with jwt auth and middleware (todoMern)
+
+# This is how we pass headers and body together in axios 
+```
+await axios.post("http://localhost:3000/create", {
+         title,
+         description
+      } ,{
+        headers:{
+          token:localStorage.getItem("token")
+        },
+      })
+```
