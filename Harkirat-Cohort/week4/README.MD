@@ -10,11 +10,11 @@
 
 ---
 
-# Command Line Interface (cli.js)
+# Command Line Interface (cli.js) [cli.js click to see code](./cli.js)
 
 - find sum
 
-# Command Line Interface Todo that Store data in fileSystemDataBase (todoCLI.js)
+# Command Line Interface Todo that Store data in fileSystemDataBase  [todoCli.js click to see code](./todoCLI.js)
 
 - we get All available command by runing this
 
@@ -26,7 +26,7 @@
 
 ![yes](/Users/vikram/Coding/Web-Dev-Cohort/week4/assets/yes.png)
 
-# Hospital Kideny Management Game (hospital.js)
+# Hospital Kideny Management Game [hospital.js click to see code](./hospital.js)
 
 -
 
@@ -36,7 +36,7 @@
 
 -
 
-# FileServer File of that folder Expose to HTTP server (fileServer.js)
+# FileServer File of that folder Expose to HTTP server () [fileServer.js click to see code](./fileServer.js)
 
 - You need to create an express HTTP server in Node.js which will handle the logic of a file server.Use built in Node.js `fs` module
 

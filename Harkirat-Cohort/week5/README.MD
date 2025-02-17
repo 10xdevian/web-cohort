@@ -8,8 +8,8 @@
 
 ---
 
-# Create a HTTP server where you pass the query a and b and that add, sub ,mul, and div (addSubMulDiv.js)
+# Create a HTTP server where you pass the query a and b and that add, sub ,mul, and div [addSubMulDiv.js click to see code](./addSubMulDiv.js)
 
-# Assignment 1  (urlHostTimeMiddleware.js)
+# Assignment 1 [urlHostTimeMiddleware.js click to see code](./urlHostTimeMiddleware.js)
 
-# Assignment 2  (noOfRequest.js)
+# Assignment 2 () [noOfRequest.js click to see code](./noOfRequest.js)
