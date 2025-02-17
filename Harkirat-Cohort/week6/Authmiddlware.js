@@ -62,9 +62,9 @@ app.post("/signin", logMiddleware, function (req, res) {
 const auth = (req, res, next) => {
   const token = req.headers.token;
   const decodeInfo = jwt.verify(token, JWT_SECRET);
-  const username = decodeInfo.username; // this is how we paas the data from middleware to the routes
+  const username = decodeInfo.username; 
   if (username) {
-    req.username = username;
+    req.username = username; // this is how we paas the data from middleware to the routes
     next();
   } else {
     res.json({
