@@ -6,7 +6,6 @@
 
 - [week 6.1 || Authentincation , JWT ](https://petal-estimate-4e9.notion.site/Authentincation-a4b43c7cc1d14535a7b5b366080095fa)
 
-- [week 5.2 || Middlewares and Cors](https://petal-estimate-4e9.notion.site/HTTP-Deep-dive-d59b6336fa5a46daa56c21063578d400?pvs=74)
 
 ---
 
@@ -21,6 +20,13 @@ In jwt we dont enctypt the string we just encode the string
 ### This is how we pass the data from middleware to routes  (Authmiddlware.js)
 
 # Full stack Todo app withoud mongodb with jwt auth and middleware (todoMern)
+ 1. User can signup/signin
+ 2. User cant able to create todos without signin
+ 3. user can not see their todos is the user is not login
+ 5. we store the login token inside the browser so user dont need to login everytimes 
+ 2. User can create/delete/update TODOs
+ 3. User can see their existing todos and mark them as done
+ 
 
 # This is how we pass headers and body together in axios 
 ```
