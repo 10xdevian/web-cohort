@@ -3,12 +3,13 @@ const jwt = require("jsonwebtoken");
 const mongoose = require("mongoose");
 const { z } = require("zod");
 const bcrypt = require("bcrypt");
+const cors = require("cors");
 const {UserModel , TodoModel} = require("./Schema")
 const {auth,JWT_SECRET} = require("./authmiddleware")
 const app = express();
 
 
-
+app.use(cors())
 app.use(express.json());
 
 mongoose.connect("mongodb+srv://vikramkrgupta01:h0yAEui6if70hpev@cohort02.qhche5y.mongodb.net/mernTodo");
@@ -17,7 +18,7 @@ app.post("/signup", async function(req, res){
   
   // input vailidation 
   const requireBody= z.object({
-    name: z.string()
+    fullname: z.string()
       .trim()
       .regex(/^[A-Za-z]+ [A-Za-z]+$/, "Please enter a valid first and last name (e.g., 'John Doe')"),
       
@@ -41,11 +42,11 @@ app.post("/signup", async function(req, res){
     })
   }
   
-  const { name, username,email, password } = req.body;
+  const { fullname, username,email, password } = req.body;
   const hashPassword = await bcrypt.hash(password, 10)
 
   await UserModel.create({
-    name,
+    fullname,
     username,
     email,
    password: hashPassword
