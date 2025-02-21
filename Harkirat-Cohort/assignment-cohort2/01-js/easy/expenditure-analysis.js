@@ -12,8 +12,9 @@
 	}
   Output - [{ category: 'Food', totalSpent: 10 }] // Can have multiple categories, only one example is mentioned here
 */
-
+console.log(68+34)
 function calculateTotalSpentByCategory(transactions) {
+  //Bro can you solve this problem
   return [];
 }
 
