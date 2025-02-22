@@ -14,7 +14,7 @@ const Todo = new Schema ({
   title : String,
   description:String,
   userId : ObjectId,
-  done : Boolean,
+  // done : Boolean,
 })
 
 // now create the model 

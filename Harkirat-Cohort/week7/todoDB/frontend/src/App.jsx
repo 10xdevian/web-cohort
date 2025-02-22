@@ -449,6 +449,7 @@ function ToggelModal({ signupOpen, onClose, children, loginOpen }) {
   return (
     <>
       <div
+        
         onClick={onClose}
         className={`fixed inset-0 flex justify-center items-center transition-colors ${
           signupOpen || loginOpen ? "visible bg-black/70" : "invisible"
@@ -457,6 +458,7 @@ function ToggelModal({ signupOpen, onClose, children, loginOpen }) {
         {/* modal  */}
         {/* pl-10 pr-10 pt-5 pb-5 */}
         <div
+          
           onClick={(e) => e.stopPropagation()}
           className={`bg-gray-800 rounded-xl shadow  w-auto h-auto transition-all p-6 ${
             signupOpen || loginOpen

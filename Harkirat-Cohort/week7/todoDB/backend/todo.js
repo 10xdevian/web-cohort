@@ -105,7 +105,7 @@ app.post("/todo",auth, async function(req, res){
   const requestBody = z.object({
     title:z.string(),
     description:z.string(),
-    done:z.boolean(),
+    // done:z.boolean(),
   })
   
   const parseDataWithSucess = requestBody.safeParse(req.body);
@@ -117,11 +117,11 @@ app.post("/todo",auth, async function(req, res){
     })
   }
   
-  const { title, description, done } = req.body;
+  const { title, description } = req.body;
   await TodoModel.create({
     title,
     description,
-    done,
+    // done,
     userId,
   })
   res.status(200).json({
