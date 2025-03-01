@@ -5,6 +5,8 @@ const JWT_ADMIN_PASSWORD = require("../config")
 const adminModel = require("../schema/Admin.schema")
 const { adminSignupSchema  , adminSigninSchema} = require("../vailidator/adminValidator");
 const { adminMiddleware } = require("../middleware/adminMiddleware");
+const { courseSchema } = require("../vailidator/coursesValidator");
+const { courseModel } = require("../schema/Course.schema");
 const adminRouter = Router();
 
 
@@ -74,15 +76,50 @@ adminRouter.post("/signin", async (req , res)=>{
 })
 
 
-adminRouter.post("/course", adminMiddleware,(req , res)=> {
+adminRouter.post("/course", adminMiddleware,async (req , res)=> {
+  const adminId = req.userId;
   
+  const validatedCourseData = courseSchema.safeParse(req.body);
+  
+  if(!validatedCourseData.success){
+    return res.status(400).json({
+      msg:"Validation Error",
+      error:validatedCourseData.error,
+    })
+  }
+  
+  try{
+    await courseModel.create({
+      ...validatedCourseData.data,
+      createrId:adminId,
+    })
+    res.status(200).json({
+      msg:"Course is Created"
+    })
+  }catch(error){
+    console.log("error white creating course", error);
+    res.status(500).json({
+      msg:"Internal Server Error while Creating Courses"
+    })
+  }
 } )
 
 
-adminRouter.get("/purchased", (req , res)=>{
- res.json({
-   msg:"purchased courses endpoint"
- })
+adminRouter.get("/courses",adminMiddleware ,async (req , res)=>{
+  const adminId = req.userId;
+  try{
+    const courses = await courseModel.find({
+      createrId:adminId,
+    })
+    res.status(200).json({
+      courses
+    })
+  }catch(error){
+    console.log("error while getting the course", error)
+    res.status(500).json({
+      msg:"Internal server error"
+    })
+  }
 })
 
 
