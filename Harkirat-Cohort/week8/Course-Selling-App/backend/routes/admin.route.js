@@ -62,7 +62,7 @@ adminRouter.post("/signin", async (req , res)=>{
  }
     const token = jwt.sign({
       id: findUser._id.toString(), 
-    }, process.env.JWT_ADMIN_PASSWORD);
+    }, JWT_ADMIN_PASSWORD);
     res.status(200).json({
       msg:"Singin sucessfully ",
       token 
