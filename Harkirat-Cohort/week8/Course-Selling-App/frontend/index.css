@@ -1,12 +1,2 @@
 @import "tailwindcss";
 
-/* Enable hover effect for dropdown */
-.group:hover .group-hover\:block {
-    display: block;
-  }
-  
-  /* Enable hover effect for nested dropdown */
-  .group-sub:hover .group-hover\:block {
-    display: block;
-  }
-  
