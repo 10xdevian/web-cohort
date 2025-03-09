@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Button from "./ReUseableComponents";
+import Button from "./Button";
 import { AiFillPhone, AiOutlineArrowRight } from "react-icons/ai";
 
 function Navbar() {
@@ -75,9 +75,7 @@ function Navbar() {
                 className="text-gray-800 hover:text-gray-900 p-2"
                 to={item.path}
               >
-                
-                  {item.name}
-                 
+                {item.name}
               </Link>
 
               {/* DropDown Menu */}

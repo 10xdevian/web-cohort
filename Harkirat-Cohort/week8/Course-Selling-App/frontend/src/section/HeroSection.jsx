@@ -1,38 +1,70 @@
 import React from "react";
-import Button from "../components/ReUseableComponents";
+import Button from "../components/Button";
+import { Card } from "../components/Card";
+import { AiOutlineArrowRight } from "react-icons/ai";
 
+import Section from "../components/Section";
 export default function HeroSection() {
   return (
-    <section className=" bg-blue-50 px-[20rem] py-10">
-      <div className="">
-        <div>
-          <h1>Online coaching that delivers results</h1>
-          <p>Explore our online courses</p>
-          <div className="flex gap-2">
-            <Button rounded="full" borderColor="sky" borderSize="2">
-              JEE
-            </Button>
-            <Button rounded="full" borderColor="sky" borderSize="2">
-              NEET
-            </Button>
-            <Button rounded="full" borderColor="sky" borderSize="2">
-              Class 6-10
-            </Button>
-            <Button rounded="full" borderColor="sky" borderSize="2">
-              CUET
-            </Button>
+    <>
+      <Section backgroundColor="#eef2f9">
+        <div className="flex justify-between mb-10">
+          <div className="max-w-[30rem] ">
+            <h1 className="text-4xl font-semibold">
+              Online coaching that delivers results
+            </h1>
+            <p className="text-slate-600 font-semibold mt-10 mb-5">
+              Explore our online courses
+            </p>
+            <div className="flex gap-2 font-semibold">
+              <Button
+                hoverColor="#e28faf"
+                rounded="full"
+                borderColor="sky"
+                borderSize="2"
+              >
+                JEE
+              </Button>
+              <Button rounded="full" borderColor="sky" borderSize="2">
+                NEET
+              </Button>
+              <Button rounded="full" borderColor="sky" borderSize="2">
+                Class 6-10
+              </Button>
+              <Button rounded="full" borderColor="sky" borderSize="2">
+                CUET
+              </Button>
+            </div>
+          </div>
+          {/* Carusol  */}
+          <div className=" w-[23rem]  h-[15rem] bg-sky-300 rounded-lg ">
+            <div> hy</div>
           </div>
         </div>
-        <div>
-        h1
-        </div>
-      </div>
 
-      <div>
-        <Card>
+        <div className="flex justify-center">
+          <Card width="1200px" height="300px" backgroundColor="#cdefed">
+            <div className="mx-8 my-20 ">
+            <div className=" w-[30rem]  bg-slate-200">
+              <h1>
+                Win up to <span>90% scholarship</span> for JEE, NEET & Class
+                6-10 Courses!
+              </h1>
+              <Button rounded="full" backgroundColor="sky">
+                <div className="flex gap-2 py-1 items-center px-5 text-white">
+                  <p>Register for AOSAT</p>
+                  <AiOutlineArrowRight />
+                </div>
+              </Button>
+            </div>
+            <div>
+              <img src="" alt="" />
+            </div>
+            </div>
             
-        </Card>
-      </div>
-    </section>
+          </Card>
+        </div>
+      </Section>
+    </>
   );
 }
