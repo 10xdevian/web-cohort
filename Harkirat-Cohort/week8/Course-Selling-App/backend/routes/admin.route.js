@@ -89,12 +89,13 @@ adminRouter.post("/course", adminMiddleware,async (req , res)=> {
   }
   
   try{
-    await courseModel.create({
+  const course =  await courseModel.create({
       ...validatedCourseData.data,
       createrId:adminId,
     })
     res.status(200).json({
-      msg:"Course is Created"
+      msg:"Course is Created",
+      courseId:course._id,
     })
   }catch(error){
     console.log("error white creating course", error);
@@ -104,6 +105,38 @@ adminRouter.post("/course", adminMiddleware,async (req , res)=> {
   }
 } )
 
+adminRouter.put("/courses/:courseId", adminMiddleware,async function(req, res){
+  const adminId = req.userId;
+  const courseId = req.params.courseId;
+  const validatedAdminData = courseSchema.safeParse(req.body);
+  if(!validatedAdminData.success){
+    return res.status(400).json({
+      msg:"Validation Error while updateing the courses",
+      error: validatedAdminData.error,
+    })
+  }
+  try{
+   const updateCourse =  await courseModel.updateOne({
+      _id:courseId,
+      createrId:adminId,
+    }, {
+      ...validatedAdminData.data
+    })
+   
+   if(!updateCourse){
+     return res.status(400).json({
+       msg:"Course not found or not authorsied"
+     })
+   }
+   
+    res.status(200).json({
+      msg:"Course is updated"
+    })
+  }catch(error){
+    
+  }
+  
+})
 
 adminRouter.get("/courses",adminMiddleware ,async (req , res)=>{
   const adminId = req.userId;

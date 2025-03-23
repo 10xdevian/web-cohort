@@ -1,23 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
 function Header() {
+  const navMenu = [
+    { name: "home", path: "/" },
+    { name: "properties", path: "/properties" },
+    { name: "about", path: "/about" },
+  ];
   return (
     <header>
-     <Link to="/">
-     <h1>E <span>state</span></h1>
-     </Link>
-      <div className="">
-        <ul>
-          <li>
-            <Link to="/properties">Properties</Link>
-            <Link to="/about">About</Link>
-          </li>
-        </ul>
-      </div>
+      <h1>
+        E-<span>state</span>
+      </h1>
+      {/*mobile  */}
+     
 
-      <Link to="/sign-in">
-        <button className=" cursor-pointer">Login</button>
-      </Link>
+    
     </header>
   );
 }
