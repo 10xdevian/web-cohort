@@ -19,3 +19,13 @@
 - [Week 14 TypeScript](https://projects.100xdevs.com/tracks/6SbPPXGkG8QKFOTW9BmL/ts-1)
 
 - [Week 15](https://petal-estimate-4e9.notion.site/Building-a-second-brain-app-1407dfd1073580c19ac3cbe9afa9ac27)
+
+- [Week 17 Postgress SQl](https://projects.100xdevs.com/tracks/YOSAherHkqWXhOdlE4yE/sql-10)
+
+- [Week 17 Cohort2  Paytm Project ](https://projects.100xdevs.com/tracks/YOSAherHkqWXhOdlE4yE/sql-10)
+
+- [Cohort 2 Githb Repo](https://github.com/chandankushwahaa/100xdevs_2.0)
+
+- [Week 33 Cohort 2 Zappier]()
+
+
