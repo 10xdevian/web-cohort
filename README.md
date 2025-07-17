@@ -1,8 +1,8 @@
-# WEB Cohort Revision notes
+e WEB Cohort Revision notes
 
 - [week 4.1 || NodeJs | BUN | JS Run-Time](https://petal-estimate-4e9.notion.site/Node-js-Bun-and-JS-runtimes-a09a41ccd61c4f498e55750c9a1c9b34)
 
-- [week 4.2 || HTTP Servers](https://petal-estimate-4e9.notion.site/Intro-to-HTTP-26c5803f153b4401aa76e9fac08ac427)
+- [week 0.2 || HTTP Servers](https://petal-estimate-4e9.notion.site/Intro-to-HTTP-26c5803f153b4401aa76e9fac08ac427)
 
 - [week 4.2 || Express and HTTP server | Postman - Offline](https://100x-b-mcdn.akamai.net.in/cohort-2-slides/express2.pdf)
 
@@ -24,8 +24,15 @@
 
 - [Week 17 Cohort2  Paytm Project ](https://projects.100xdevs.com/tracks/YOSAherHkqWXhOdlE4yE/sql-10)
 
+# Cohort 2
+
+- [Next js](https://projects.100xdevs.com/tracks/nextjs-2/next-2-10)
+
+- [Authentication Week 16.1](https://projects.100xdevs.com/tracks/Auth/auth-1)
+
 - [Cohort 2 Githb Repo](https://github.com/chandankushwahaa/100xdevs_2.0)
 
 - [Week 33 Cohort 2 Zappier]()
 
+- [Docker week 15.1](https://projects.100xdevs.com/tracks/docker-2/docker-2-6)
 
