@@ -16,7 +16,11 @@ e WEB Cohort Revision notes
 
 - [Week 9.1 || React ](https://petal-estimate-4e9.notion.site/React-Part-1-1177dfd1073580069172fc54e33929c0)
 
+- [Week 12 || ]()
+
 - [Week 14 TypeScript](https://projects.100xdevs.com/tracks/6SbPPXGkG8QKFOTW9BmL/ts-1)
+
+- [Week 12.2 TypeScript Adv](https://projects.100xdevs.com/tracks/ts-hard/ts-hard-1)
 
 - [Week 15](https://petal-estimate-4e9.notion.site/Building-a-second-brain-app-1407dfd1073580c19ac3cbe9afa9ac27)
 
@@ -31,6 +35,7 @@ e WEB Cohort Revision notes
 
 - [Authentication Week 16.1](https://projects.100xdevs.com/tracks/Auth/auth-1)
 
+- [Next Auth ](https://projects.100xdevs.com/tracks/Next-Auth/La3EksBcKVqExEMwNAxa)
 - [Cohort 2 Githb Repo](https://github.com/chandankushwahaa/100xdevs_2.0)
 
 - [Week 33 Cohort 2 Zappier]()
