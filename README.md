@@ -29,6 +29,7 @@ e WEB Cohort Revision notes
 
 - [Week 17 Cohort2  Paytm Project ](https://projects.100xdevs.com/tracks/YOSAherHkqWXhOdlE4yE/sql-10)
 
+- [Websocket Cohort 3](https://petal-estimate-4e9.notion.site/WebSockets-1477dfd10735802982becc925074b5f0)
 # Cohort 2
 
 - [Next js](https://projects.100xdevs.com/tracks/nextjs-2/next-2-10)
