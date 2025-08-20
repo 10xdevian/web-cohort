@@ -1,0 +1,30 @@
+* {
+  flex: auto;
+  justify-content: center;
+  align-items: center;
+  background-color: azure;
+  width: auto;
+  margin-left: 10%;
+  margin-top: 10%;
+}
+
+input {
+  padding: 10px;
+  border: 2px;
+  box-sizing: border-box;
+  border-color: black;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px;
+  border-radius: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+  cursor: pointer;
+}
+
+.main-content {
+  flex: col;
+}
