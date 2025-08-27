@@ -43,3 +43,7 @@ e WEB Cohort Revision notes
 
 - [Docker week 15.1](https://projects.100xdevs.com/tracks/docker-2/docker-2-6)
 
+
+# Devops
+
+[Week 24.1 VMs and Deploying a MERN app](https://petal-estimate-4e9.notion.site/VMs-and-Deploying-a-MERN-app-1867dfd10735809b8c3ad17e07e23ff2)
