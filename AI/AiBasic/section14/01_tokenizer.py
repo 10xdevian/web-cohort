@@ -1,10 +1,5 @@
 import tiktoken
-from openai import OpenAI
 
-# client = OpenAI()
-
-
-# client.chat.completions("")
 
 enc = tiktoken.encoding_for_model("gpt-4o")
 
